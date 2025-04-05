@@ -122,7 +122,7 @@ import os
 
 STATIC_URL = 'main/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]  # Ensure this path exists
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
