@@ -18,25 +18,6 @@ def contact(request):
     return render(request, 'main/contact.html')
 
 
-def send_email(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        message = request.POST['message']
-
-        full_message = f"From: {name} <{email}>\n\n{message}"
-
-        send_mail(
-            subject="New message from your portfolio site",
-            message=full_message,
-            from_email='habetayilekal10@gmail.com',
-            recipient_list=['habetayilekal10@gmail.com'],
-        )
-        return redirect('home')  # or wherever you want to redirect
-
-    return render(request, 'main/contact.html')
-
-
 # def contact(request):
 #     if request.method == 'POST':
 #         form = ContactForm(request.POST)
