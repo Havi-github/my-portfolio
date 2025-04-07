@@ -14,9 +14,6 @@
  <!-- Navigation -->
  <nav id="navbar">
     <a href="#" class="logo">HELLO, <span id="changing-text">MY NAME IS HABTAGIORGIS</span></a>
-
-      <!-- Toggle Theme Button -->
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
      
     <div class="hamburger">
         <i class="fas fa-bars"></i>
@@ -274,25 +271,5 @@
         setInterval(changeText, 3000); // Change text every 3 seconds
     });
 </script>
-
-<script>
-    const toggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Load saved theme
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    toggle.textContent = '☀️';
-} else {
-    toggle.textContent = '🌙';
-}
-
-toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const dark = body.classList.contains('dark-mode');
-    toggle.textContent = dark ? '☀️' : '🌙';
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-});
-    </script>
 </body>
 </html>
