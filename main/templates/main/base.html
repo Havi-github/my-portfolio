@@ -131,7 +131,8 @@
             </div>
         </div>
         <div class="contact-form" style="animation: fadeIn 0.5s ease forwards 0.3s">
-            <form id="contactForm" method="POST">
+            <form id="contactForm" action="{% url 'send_email' %}" method="POST">
+                {% csrf_token %}   <!-- add this section -->
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
