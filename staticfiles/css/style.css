@@ -19,6 +19,22 @@ body {
     background-color: var(--light);
     color: var(--dark);
     overflow-x: hidden;
+/*     background-color: #ffffff; */
+    color: #222;
+    transition: all 0.4s ease;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode .navbar,
+.dark-mode .about-section,
+.dark-mode .footer {
+    background-color: #1f1f1f;
+    color: #fff;
 }
 
 /* Navigation */
@@ -500,22 +516,7 @@ footer {
     transform: scale(1.2);
 }
 
-/* Light Theme (default) */
-body {
-    background-color: #ffffff;
-    color: #222;
-    transition: all 0.4s ease;
-}
 
-/* Dark Theme */
-body.dark-mode {
-    background-color: #121212;
-    color: #f5f5f5;
-}
 
-.dark-mode .navbar,
-.dark-mode .about-section,
-.dark-mode .footer {
-    background-color: #1f1f1f;
-    color: #fff;
-}
+
+
