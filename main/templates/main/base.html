@@ -24,7 +24,7 @@
         <a href="#contact">Contact</a>
     </div>
 </nav>
-<button id="theme-toggle" class="theme-toggle">🌙</button>
+<!-- <button id="theme-toggle" class="theme-toggle">🌙</button> -->
     
 <!-- About Section -->
 <section id="about">
@@ -272,25 +272,25 @@
         setInterval(changeText, 3000); // Change text every 3 seconds
     });
 
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    // const toggle = document.getElementById('theme-toggle');
+    // const body = document.body;
 
-    // Check saved theme from localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        toggle.textContent = '☀️';
-    }
+    // // Check saved theme from localStorage
+    // if (localStorage.getItem('theme') === 'dark') {
+    //     body.classList.add('dark-mode');
+    //     toggle.textContent = '☀️';
+    // }
 
-    toggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            toggle.textContent = '☀️';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            toggle.textContent = '🌙';
-            localStorage.setItem('theme', 'light');
-        }
-    });
+    // toggle.addEventListener('click', () => {
+    //     body.classList.toggle('dark-mode');
+    //     if (body.classList.contains('dark-mode')) {
+    //         toggle.textContent = '☀️';
+    //         localStorage.setItem('theme', 'dark');
+    //     } else {
+    //         toggle.textContent = '🌙';
+    //         localStorage.setItem('theme', 'light');
+    //     }
+    // });
     
 </script>
 </body>
