@@ -17,7 +17,7 @@
 
 body {
     background-color: var(--light);
-    color: var(--dark);
+/*     color: var(--dark); */
     overflow-x: hidden;
 /*     background-color: #ffffff; */
     color: #222;
