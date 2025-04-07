@@ -12,12 +12,41 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
+/*     background-color: var(--light);
+    color: var(--dark); */
+    
+    background-color: #ffffff;
+    color: #111111;
     overflow-x: hidden;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+body.dark-mode nav,
+body.dark-mode .section,
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: white;
 }
 
 /* Navigation */
