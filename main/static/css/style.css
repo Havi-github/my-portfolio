@@ -157,16 +157,44 @@ section {
     flex: 1;
     min-width: 300px;
     text-align: center;
+    position: relative; /* Needed for positioning decorative graphics */
 }
 
 .about-img img {
     width: 100%;
     max-width: 400px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
+/*     box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2); */
     transform: scale(0.9);
     opacity: 0;
     animation: fadeIn 0.5s ease forwards 0.3s;
+    border: 3px solid rgba(108, 99, 255, 0.3); /* Optional decorative border */
+}
+
+/* Optional decorative graphics using pseudo-elements */
+.about-img::before,
+.about-img::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.about-img::before {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #6c63ff 0%, transparent 70%);
+    top: -30px;
+    left: -30px;
+}
+
+.about-img::after {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ff63b9 0%, transparent 70%);
+    bottom: -20px;
+    right: -20px;
 }
 
 .about-text {
