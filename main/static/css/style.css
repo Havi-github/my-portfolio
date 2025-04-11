@@ -1,4 +1,6 @@
-/* CSS will go here */
+/* ===================== */
+/* Variables and Base Reset */
+/* ===================== */
 :root {
     --primary: #6c63ff;
     --secondary: #4a42e8;
@@ -12,19 +14,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: background-color 0.4s, color 0.4s; 
+    transition: background-color 0.4s, color 0.4s;
 }
 
 body {
     background-color: var(--light);
     color: var(--dark);
     overflow-x: hidden;
-/*     background-color: #ffffff; */
-    color: #222;
     transition: all 0.4s ease;
 }
 
+/* ===================== */
 /* Dark Theme */
+/* ===================== */
 body.dark-mode {
     background-color: #121212;
     color: #f5f5f5;
@@ -37,7 +39,9 @@ body.dark-mode {
     color: #fff;
 }
 
+/* ===================== */
 /* Navigation */
+/* ===================== */
 nav {
     position: fixed;
     top: 0;
@@ -105,7 +109,9 @@ nav.scrolled {
     cursor: pointer;
 }
 
+/* ===================== */
 /* Sections */
+/* ===================== */
 section {
     min-height: 100vh;
     padding: 7rem 5% 2rem;
@@ -133,7 +139,9 @@ section {
     border-radius: 2px;
 }
 
+/* ===================== */
 /* About Section */
+/* ===================== */
 #about {
     background-color: white;
 }
@@ -165,31 +173,23 @@ section {
     flex: 1;
     min-width: 300px;
     text-align: center;
-    margin-top: 50px; /* Adds spacing between h3 and button */
+    margin-top: 50px;
 }
 
 .about-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-    display: inline-block;
-    position: relative;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333; /* Adjust text color */
-    
-    
-    
     font-size: 28px;
-    
+    font-weight: bold;
     color: #333;
-    margin-bottom: 20px; /* Space between h3 and button */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
 }
+
 .about-text h3::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* Distance from text */
+    bottom: -5px;
     width: 0;
     height: 3px;
     background-color: blue;
@@ -222,7 +222,9 @@ section {
     opacity: 0;
 }
 
+/* ===================== */
 /* Projects Section */
+/* ===================== */
 #projects {
     background-color: var(--light);
 }
@@ -294,7 +296,9 @@ section {
     background-color: var(--secondary);
 }
 
+/* ===================== */
 /* Contact Section */
+/* ===================== */
 #contact {
     background-color: white;
 }
@@ -415,7 +419,9 @@ section {
     transform: translateY(-3px);
 }
 
+/* ===================== */
 /* Footer */
+/* ===================== */
 footer {
     text-align: center;
     padding: 2rem;
@@ -423,7 +429,9 @@ footer {
     color: white;
 }
 
+/* ===================== */
 /* Animations */
+/* ===================== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -435,7 +443,56 @@ footer {
     }
 }
 
-/* Responsive */
+/* ===================== */
+/* Utility Classes */
+/* ===================== */
+.read-me-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-me-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #0095c2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#changing-text {
+    font-size: 24px;
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+    color: #007bff;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* ===================== */
+/* Responsive Design */
+/* ===================== */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -464,54 +521,8 @@ footer {
         font-size: 2rem;
     }
 
-    .about-content {
-        flex-direction: column;
-    }
-
+    .about-content,
     .contact-container {
         flex-direction: column;
     }
-}
-.read-me-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #007bff, #00d4ff);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.read-me-btn:hover {
-    background: linear-gradient(45deg, #0056b3, #0095c2);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-#changing-text {
-    font-size: 24px;
-    font-weight: bold;
-    transition: opacity 0.5s ease-in-out;
-    color: #007bff; /* Blue color */
-}
-
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.2);
 }
