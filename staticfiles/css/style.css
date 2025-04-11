@@ -168,7 +168,7 @@ section {
     transform: scale(0.9);
     opacity: 0;
     animation: fadeIn 0.5s ease forwards 0.3s;
-    border: 3px solid rgba(108, 99, 255, 0.3); /* Optional decorative border */
+/*     border: 3px solid rgba(108, 99, 255, 0.3); /* Optional decorative border */
 }
 
 /* Optional decorative graphics using pseudo-elements */
