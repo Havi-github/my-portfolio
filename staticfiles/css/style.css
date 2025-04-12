@@ -194,7 +194,7 @@ section {
     height: 80px;
     background: radial-gradient(circle, #ff63b9 0%, transparent 70%);
     bottom: -20px;
-    right: -20px;
+    right: 20px;
 }
 
 .about-text {
