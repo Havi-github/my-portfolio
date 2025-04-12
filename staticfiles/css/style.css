@@ -172,7 +172,7 @@ section {
 }
 
 /* Optional decorative graphics using pseudo-elements */
-.about-img::before,
+/* .about-img::before,
 .about-img::after {
     content: '';
     position: absolute;
@@ -203,7 +203,7 @@ section {
     text-align: center;
     margin-top: 20px;
 }
-
+ */
 .about-text h3 {
     font-size: 28px;
     font-weight: bold;
